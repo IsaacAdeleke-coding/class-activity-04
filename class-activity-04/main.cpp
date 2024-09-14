@@ -6,9 +6,18 @@
 //
 
 #include <iostream>
+#include <iomanip>  // For std::setw and std::left/std::right
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+int main() {
+    // Print the header of the table with left alignment
+    cout << left << setw(15) << "Course" << right << setw(10) << "Students" << endl;
+    cout << "-----------------------------" << endl;
+
+    // Print the rows with left alignment for the course and right alignment for the student numbers
+    cout << left << setw(15) << "C++" << right << setw(10) << 100 << endl;
+    cout << left << setw(15) << "JavaScript" << right << setw(10) << 50 << endl;
+
     return 0;
 }
